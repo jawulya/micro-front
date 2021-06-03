@@ -1,9 +1,9 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
 
-export const MarketingApp = () => {
+export const AuthApp = () => {
     const rootRef = useRef();
     const history = useHistory();
     useLayoutEffect(() => {
@@ -18,7 +18,7 @@ export const MarketingApp = () => {
             }
         });
 
-    history.listen(onParentNavigate)
+        history.listen(onParentNavigate)
     }, [])
     return <div ref={rootRef}/>
 }

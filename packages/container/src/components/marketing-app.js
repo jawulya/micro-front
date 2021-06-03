@@ -3,7 +3,7 @@ import { mount } from 'marketing/MarketingApp';
 import { useHistory } from 'react-router-dom';
 
 
-export const MarketingApp = () => {
+export default () => {
     const rootRef = useRef();
     const history = useHistory();
     useLayoutEffect(() => {

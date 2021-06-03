@@ -3,7 +3,7 @@ import { mount } from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
 
-export const AuthApp = () => {
+export default ({onSignIn}) => {
     const rootRef = useRef();
     const history = useHistory();
     useLayoutEffect(() => {
@@ -15,6 +15,9 @@ export const AuthApp = () => {
                 if ( pathname !== nextPathName ) {
                     history.push(nextPathName)
                 }
+            },
+            onSignIn() {
+                onSignIn();
             }
         });
 

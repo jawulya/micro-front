@@ -12,7 +12,7 @@ const devConfig = {
         historyApiFallback: true
     },
     output: {
-        publicPath: 'http://localhost:8080/'
+        publicPath: 'http://ocalhost:8080/'
     },
     plugins: [
         new ModuleFederationPlugin({
